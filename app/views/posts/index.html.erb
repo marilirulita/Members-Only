@@ -1,27 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h1 class="title">Posts</h1>
 
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Article</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.article %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+        <% @posts.each do |post| %>
+          <div class="box">
+          <article class="media"> 
+            <div class="media-content"> 
+              <div class="content"> 
+                <%= post.article %>
+                <%= link_to 'Show', post %>
+                <%= link_to 'Edit', edit_post_path(post) %>
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            </div>
+          </article> 
+          </div>
+        <% end %>
+        
+        </div>
+      </div>
+    </div>
+  </div>
