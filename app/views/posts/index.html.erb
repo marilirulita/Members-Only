@@ -28,7 +28,11 @@
                   </div>
                   <% elsif user_signed_in? %>
                   <div class="level-right is-mobile">
-                    <%= %>
+                    <%= post.id %>
+                    <%= post.created_at %>
+                    
+                    <%= post.author %>
+                    
                   </div>
                 </nav>
                 <% end %>
