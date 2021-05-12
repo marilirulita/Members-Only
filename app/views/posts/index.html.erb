@@ -26,9 +26,11 @@
                     <% end %>
                   </div>
 
-                  <div class="content"> 
-                  <strong>Author´s email: </strong><br/>
-                  <small><%= post.user.email %> </small><br/>
+                  <div class="level-right is-mobile">
+                    <div class="content">
+                    <strong>Author´s email: </strong><br/>
+                    <small><%= post.user.email %> </small><br/>
+                    </div>
                   </div>
 
                   <% elsif user_signed_in? %>
