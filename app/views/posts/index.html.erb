@@ -10,7 +10,9 @@
             <div class="media-content"> 
               <div class="content"> 
                 <%= post.article %>
+
                 <% if user_signed_in? && current_user.id == post.user_id %>
+
                 <nav class="level">
                   <div class="level-left is-mobile">
                     <%= link_to post, class: "level-item" do %>
@@ -24,18 +26,20 @@
                     <% end %>
                   </div>
                   <div class="level-right is-mobile">
-                    <%= current_user.email %>
+                    <%= post.user.email %>
                   </div>
+
                   <% elsif user_signed_in? %>
+                  
                   <div class="level-right is-mobile">
-                    <%= post.id %>
-                    <%= post.created_at %>
-                    
-                    <%= post.author %>
+
+                    <%= post.user.email %>
                     
                   </div>
                 </nav>
-                <% end %>
+
+               <% end %>
+
               </div>
             </div>
           </article> 
