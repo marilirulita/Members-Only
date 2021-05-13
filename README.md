@@ -12,6 +12,11 @@ A small project using [Devise](https://github.com/heartcombo/devise) to handle a
 
 - Run this command in your OS terminal: `git clone https://github.com/marilirulita/Members-Only` to get a copy of the project.
 - From the root folder of the project, run the command bundle install to install any required gems that you might need.
+- Run migration command: 
+
+  ```
+  rails db: migrate
+  ```
 
 ### Prerequisites
 
